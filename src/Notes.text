@@ -1,0 +1,21 @@
+1..Sides effect are anything that happen other then Rendering UI or React to user input....for eg Sending a HTTp request or storing Data in Browser Storage...things which are not related to react
+
+2..Side Effects can cause Code duplication,bugs, infinite loop etc
+
+3..USeeffect is a bulit in hook which taes 2 parameters 1st is a function that should be executed After every component evaluation if the specified dependencies change 1st function will re-run 2nd argument are specified denpendencies specify our denpendencies here if it changes the 1st function will execute as it contains the code of the sideEffect 
+
+4.. The problem with login is when we reload the page its state gets reset ...because it state iss managed by the javascript variable by the react so reload the page the script is restarts and variables are lost from the last execution all of them
+
+5..First step involves storing the data in the local storage
+
+Second step is calling the UseEffect hook and it takes 2 arguments 1st is the function in which we check there is data in localstorage if there is data in localstorage with usesEffect hook it will not restart from the start because of useEffect it will only retsatrt once ...and when our dependencies changes and if we reload  we are logged in..\
+
+6...Seconds is used for specifying dependencies and [] its array of denpendencies
+
+7..Dependency is important in USeEffect because if we don’t include a dependency array, and we’re using useEffect to fetch data to display it, we will always trigger another render after useEffect runs.
+
+Unless we provide useEffect a dependency array.The dependency array in useEffect lets we specify the conditions to trigger it. If you provide useEffect an empty dependency array, it’ll run exactly once and it create an infinite loop
+
+8...Denpencies are important in useEffect because we just not want to run this effect once, when the app starts up but indded ,after component re-evaluation if a certain dependency changes and we don't use dependency in useeffect it may lead to infinite loops,bugs etc
+
+9..Because if we don't  have enteredEmail and enteredPassword in the dependency of useEffect it will crash our page or it will into an infinite loop...
