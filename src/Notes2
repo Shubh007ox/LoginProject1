@@ -1,0 +1,18 @@
+1..Debouncing is used for optimizing the performance of a web app. It is done by limiting the rate of execution of a particular function (also known as rate limiting)....if don't we use debouncing our app will send https request or perform a same function many times ...untill we restart app....thats why its aslo know as limiting..
+
+2... the udemy trainer achieve debouncing in his code by using the setTimeout Now the Api call will be done every 500 miliseconds unlike before..
+
+3..cleanup function get called by returning the anonomous arrow function in the UseEffect.....This will run as an cleanup process before useEffect executes the settimeot function next time...whenever this useEffect function will run ,except for the first time useEffect run ,so the clean up function run before the any sideEffect execution expect for the first one
+
+4..The cleanup function prevents memory leaks and removes some unnecessary and unwanted behaviors.
+
+5..first useEffect hook is called check form validity for the first time when start the app then sencond time clean up runs immediately after that then the next execution takes place re
+
+6.The useReducer hook is usually recommended when the state becomes complex, with state values depending on each other or when the next state depends on the previous one. However, many times you can simply bundle your separate useState statements into one object and continue to use useState 
+
+7.. we create the emailReducer outside the functional component and not inside it because inside of the reducer function we won't be needing any data generated inside of the component function doesn't need to interact with anything defined inside of the component function
+8..emailReducer function have the useReducer in it ...which takes to input state and action....state contains the latest snapshot and the action contains the dispatch action 
+
+9..The dispatch function accepts an object that represents the type of action we want to execute when it is called. Basically, it sends the type of action to the reducer function to perform its job, which, of course, is updating the state.
+
+The action to be executed is specified in our reducer function, which in turn, is passed to the useReducer. The reducer function will then return the updated state.
